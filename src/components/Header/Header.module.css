@@ -8,7 +8,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.heading {
+.heading { 
   color: #ffffff;
   margin: 0;
   font-size: 1.8rem;
@@ -45,4 +45,13 @@
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
+}
+
+@media (max-width: 680px) {
+  .header {
+    flex-direction: column;
+  }
+  .heading { 
+    font-size: 1.3rem;
+  }
 }

@@ -1,0 +1,136 @@
+/* MovieDetail.module.css */
+.container {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.posterSection {
+  position: relative;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.year {
+  color: #a0a0a0;
+  font-weight: 300;
+}
+
+.moreData {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: #d0d0d0;
+}
+
+.rated {
+  padding: 0.2rem 0.5rem;
+  background: #e63946;
+  border-radius: 4px;
+}
+
+.infoGrid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.infoItem h3 {
+  color: #e63946;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.plot {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.plot h2 {
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.ratings h2 {
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.ratingBars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ratingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.ratingSource {
+  font-weight: bold;
+}
+
+.ratingValue {
+  color: #f5c518;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .posterSection {
+    text-align: center;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .poster {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .metadata {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

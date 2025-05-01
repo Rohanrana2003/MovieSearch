@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <NavLink to="/" className={styles.logoLink}>
-        <h1 className={styles.heading}>Movie Finder</h1>
+        <h1 className={styles.heading}>Movie Browser App</h1>
       </NavLink>
 
       <nav className={styles.navLinks}>

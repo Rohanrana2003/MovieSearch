@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./MoviesGrid.module.css";
+import { NavLink } from "react-router-dom";
 
 const MoviesGrid = ({ moviesData }) => {
   // Initialize state with favorites from localStorage
@@ -13,7 +14,6 @@ const MoviesGrid = ({ moviesData }) => {
 
   // Save favorites to localStorage whenever they change
   useEffect(() => {
-    console.log(moviesData);
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
@@ -60,7 +60,9 @@ const MoviesGrid = ({ moviesData }) => {
               <h3 className={styles.movieTitle}>{movie.Title}</h3>
               <div className={styles.movieDetails}>
                 <span className={styles.year}>{movie.Year}</span>
-                <span className={styles.moreInfo}>More Info </span>
+                <NavLink to={`/detail/${movie.imdbID}`}>
+                  <span className={styles.moreInfo}>More Info </span>
+                </NavLink>
               </div>
             </div>
           </div>

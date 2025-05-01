@@ -1,0 +1,150 @@
+/* ShimmerDetail.module.css */
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.posterSection {
+  position: relative;
+}
+
+.posterShimmer {
+  height: 500px;
+  background: #2d2d2d;
+  border-radius: 10px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titleShimmer {
+  height: 50px;
+  width: 70%;
+  background: #2d2d2d;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.metadataShimmer {
+  display: flex;
+  gap: 1rem;
+}
+
+.metadataItem {
+  height: 25px;
+  width: 80px;
+  background: #2d2d2d;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.infoGridShimmer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.infoItemShimmer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoLabel {
+  height: 20px;
+  width: 40%;
+  background: #2d2d2d;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.infoValue {
+  height: 25px;
+  width: 80%;
+  background: #2d2d2d;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.plotShimmer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.plotLine {
+  height: 15px;
+  background: #2d2d2d;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.plotLine:nth-child(1) { width: 100%; }
+.plotLine:nth-child(2) { width: 90%; }
+.plotLine:nth-child(3) { width: 80%; }
+
+.ratingsShimmer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ratingItemShimmer {
+  height: 40px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Add shimmer animation to all elements */
+[class*="Shimmer"] {
+  background: linear-gradient(90deg, #2d2d2d 25%, #3a3a3a 50%, #2d2d2d 75%);
+  background-size: 200% 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .posterShimmer {
+    height: 400px;
+  }
+  
+  .titleShimmer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem;
+  }
+  
+  .posterShimmer {
+    height: 300px;
+  }
+}

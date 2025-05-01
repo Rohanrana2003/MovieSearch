@@ -125,4 +125,8 @@
   .moviesGrid {
     grid-template-columns: 1fr;
   }
+  .movieCard {
+    min-width: 250px;
+  }
+  
 }

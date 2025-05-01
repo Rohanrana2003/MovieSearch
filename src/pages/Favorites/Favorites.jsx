@@ -21,7 +21,9 @@ const Favorites = () => {
       {Array.isArray(favoriteMovies) && favoriteMovies.length > 0 ? (
         <div>
           <h1 className={styles.sectionTitle}>My favorites</h1>{" "}
-          <button onClick={() => removeAll()}>Remove All</button>
+          <button className={styles.removeButton} onClick={() => removeAll()}>
+            Remove All
+          </button>
           <MoviesGrid moviesData={favoriteMovies} />
         </div>
       ) : (

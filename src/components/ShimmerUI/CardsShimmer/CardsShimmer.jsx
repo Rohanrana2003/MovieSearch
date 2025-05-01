@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./ShimmerUI.module.css";
+import styles from "./CardsShimmer.module.css";
 
-const ShimmerUI = () => {
+const CardsShimmer = () => {
   return (
     <section className={styles.moviesSection}>
       <div className={styles.moviesGrid}>
         {
           // Loading skeletons
-          Array(6)
+          Array(10)
             .fill()
             .map((_, index) => (
               <div key={index} className={styles.movieCardSkeleton}>
@@ -23,4 +23,4 @@ const ShimmerUI = () => {
     </section>
   );
 };
-export default ShimmerUI;
+export default CardsShimmer;
