@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import Favourites from "./pages/Favourites/Favourites";
+import Favorites from "./pages/favorites/favorites";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/favorites" element={<Favourites />} />
+        <Route path="/Favorites" element={<Favorites />} />
       </Routes>
     </BrowserRouter>
   );

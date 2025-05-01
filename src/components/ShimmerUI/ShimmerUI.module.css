@@ -1,0 +1,56 @@
+/* Loading Skeletons */
+.moviesSection {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.moviesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.movieCardSkeleton {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: skeletonPulse 1.5s infinite;
+}
+
+.skeletonPoster {
+  height: 350px;
+  background: #2d2d2d;
+}
+
+.skeletonContent {
+  padding: 1.2rem;
+}
+
+.skeletonTitle {
+  height: 20px;
+  background: #2d2d2d;
+  width: 80%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.skeletonDetails {
+  height: 15px;
+  background: #2d2d2d;
+  width: 60%;
+  border-radius: 4px;
+}
+
+@keyframes skeletonPulse {
+  0% { opacity: 1 }
+  50% { opacity: 0.5 }
+  100% { opacity: 1 }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skeletonPoster {
+    height: 300px;
+  }
+}

@@ -1,0 +1,21 @@
+
+.sectionTitle {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mainContainer{
+  padding: 20px 40px;
+}
+
+.defaultHeading{
+  margin-top: 200px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+  
+}

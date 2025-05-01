@@ -20,7 +20,11 @@ const SearchBar = ({ onSearch }) => {
           onChange={(e) => setQuery(e.target.value)}
           className={styles.searchInput}
         />
-        <button type="submit" className={styles.searchButton}>
+        <button
+          type="submit"
+          disabled={!query.trim()}
+          className={styles.searchButton}
+        >
           <svg className={styles.searchIcon} viewBox="0 0 24 24">
             <path
               fill="currentColor"
