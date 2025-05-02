@@ -20,7 +20,7 @@ const Home = () => {
       <SearchBar onSearch={handleSearch} />
 
       {/* Main Heading  */}
-      {searchQuery && (
+      {moviesData && (
         <h1 className={styles.sectionTitle}>
           Search Results for {searchQuery.toUpperCase()}{" "}
         </h1>

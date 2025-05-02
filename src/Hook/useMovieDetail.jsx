@@ -9,7 +9,7 @@ const useMovieDetail = (movieId) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://www.omdbapi.com/?i=" +
+          "https://www.omdbapi.com/?i=" +
             movieId +
             "&apikey=" +
             import.meta.env.VITE_OMDB_API //Secured API Key

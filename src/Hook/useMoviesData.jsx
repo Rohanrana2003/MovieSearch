@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useMoviesData = (query) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -11,7 +11,7 @@ const useMoviesData = (query) => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "http://www.omdbapi.com/?s=" +
+          "https://www.omdbapi.com/?s=" +
             query +
             "&apikey=" +
             import.meta.env.VITE_OMDB_API //Secured API Key

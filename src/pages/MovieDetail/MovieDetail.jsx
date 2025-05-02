@@ -6,11 +6,12 @@ import useMovieDetail from "../../Hook/useMovieDetail";
 
 const MovieDetail = () => {
   const { movieId } = useParams(); // fetching id Using params
-  const movie = useMovieDetail(movieId);
+  const movie = useMovieDetail(movieId); // custom hook to fetch movie details
 
   if (!movie)
     return (
       <div className={styles.loading}>
+        {/* Fallback UI */}
         <DetailShimmer />
       </div>
     );
@@ -27,7 +28,7 @@ const MovieDetail = () => {
                 ? movie.Poster
                 : "https://cdn.pixabay.com/photo/2016/12/14/23/08/page-not-found-1907792_1280.jpg"
             }
-            alt={movie.Title}
+            alt={movie.Title || "Movie Poster"}
             className={styles.poster}
           />
         </div>
@@ -39,7 +40,7 @@ const MovieDetail = () => {
             {movie.Title} <span className={styles.year}>({movie.Year})</span>
           </h1>
 
-          {/* Metadata */}
+          {/* More Details */}
           <div className={styles.moreData}>
             {movie.Rated && <span className={styles.rated}>{movie.Rated}</span>}
             {movie.Runtime && <span>{movie.Runtime}</span>}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./MoviesGrid.module.css";
-import { NavLink } from "react-router-dom";
+import MovieCard from "../MovieCard/MovieCard";
 
 const MoviesGrid = ({ moviesData }) => {
   // Initialize state with favorites from localStorage
@@ -30,42 +30,13 @@ const MoviesGrid = ({ moviesData }) => {
     <div className={styles.moviesGrid}>
       {Array.isArray(moviesData) ? (
         moviesData.map((movie) => (
-          <div key={movie.imdbID} className={styles.movieCard}>
-            <div
-              className={styles.posterContainer}
-              style={{
-                backgroundImage: `url(${
-                  movie.Poster !== "N/A" //Checking the movie poster is there or not
-                    ? movie.Poster
-                    : "https://cdn.pixabay.com/photo/2016/12/14/23/08/page-not-found-1907792_1280.jpg"
-                })`,
-              }}
-            >
-              <button
-                className={`${styles.favoriteButton} ${
-                  favorites.some((fav) => fav.imdbID === movie.imdbID)
-                    ? styles.active
-                    : ""
-                }`}
-                onClick={() => handleFavoriteClick(movie)}
-              >
-                {favorites.some((fav) => fav.imdbID === movie.imdbID)
-                  ? "♥"
-                  : "♡"}
-              </button>
-              <div className={styles.typeBadge}>{movie.Type}</div>
-            </div>
-
-            <div className={styles.movieInfo}>
-              <h3 className={styles.movieTitle}>{movie.Title}</h3>
-              <div className={styles.movieDetails}>
-                <span className={styles.year}>{movie.Year}</span>
-                <NavLink to={`/detail/${movie.imdbID}`}>
-                  <span className={styles.moreInfo}>More Info </span>
-                </NavLink>
-              </div>
-            </div>
-          </div>
+          // Movie Card
+          <MovieCard
+            key={movie.imdbID}
+            movie={movie}
+            handleFavoriteClick={handleFavoriteClick}
+            favorites={favorites}
+          />
         ))
       ) : (
         <div className={styles.sectionTitle}>

@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Favorites from "./pages/favorites/favorites";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
+import "./App.module.css";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Favorites" element={<Favorites />} />
         <Route path="/detail/:movieId" element={<MovieDetail />} />
+        <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </BrowserRouter>
   );

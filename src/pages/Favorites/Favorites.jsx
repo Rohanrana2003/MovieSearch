@@ -3,6 +3,7 @@ import styles from "./favorites.module.css";
 import MoviesGrid from "../../components/MovieGrid/MoviesGrid";
 
 const Favorites = () => {
+  // Fetching the favorite movies from local storage
   const [favoriteMovies, setFavoriteMovies] = useState(() => {
     if (typeof window !== "undefined") {
       const savedfavorites = localStorage.getItem("favorites");
@@ -11,6 +12,7 @@ const Favorites = () => {
     return [];
   });
 
+  // Removing all favorite movies from local storage and page
   const removeAll = () => {
     setFavoriteMovies(null);
     localStorage.clear();
@@ -18,6 +20,7 @@ const Favorites = () => {
 
   return (
     <div className={styles.mainContainer}>
+      {/* Checking if there is array with alteast one item */}
       {Array.isArray(favoriteMovies) && favoriteMovies.length > 0 ? (
         <div>
           <h1 className={styles.sectionTitle}>My favorites</h1>{" "}
